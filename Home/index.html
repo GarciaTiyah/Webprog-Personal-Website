@@ -1,60 +1,163 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <link rel="stylesheet" href="css/mystyle.css">
-<title>Personal Profile</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Christian Garcia's Personal Profile</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1e1e2f;
+            color: #f8f8f8;
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, #4CAF50, #2196F3);
+            color: white;
+            text-align: center;
+            padding: 30px 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin: 0;
+        }
+
+        section {
+            margin: 20px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+            backdrop-filter: blur(10px);
+        }
+
+        h2, h3, h4, h5 {
+            color: #4CAF50;
+        }
+
+        img {
+            border-radius: 12px;
+            max-width: 100%;
+            height: auto;
+        }
+
+        ul {
+            list-style-type: square;
+            margin-left: 20px;
+        }
+
+        table img {
+            margin: 10px 0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px;
+            background: linear-gradient(135deg, #2196F3, #4CAF50);
+            color: white;
+            font-size: 0.9em;
+        }
+
+        .gallery img {
+            width: 100%;
+            max-width: 250px;
+            margin: 10px;
+            border: 2px solid #4CAF50;
+            transition: transform 0.3s;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Background Design */
+        body:before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://www.transparenttextures.com/patterns/circles.png');
+            z-index: -1;
+            opacity: 0.05;
+        }
+    </style>
 </head>
 <body>
-<h1>Personal Profile Webpage</h1>
-<hr>
-<h2>About Me</h2>
-<div>
-  <img src="https://scontent.fmnl4-2.fna.fbcdn.net/..." width="200" height="200" alt="Profile Picture">
-</div>
-<p>Name: Christian A. Garcia</p>
-<p>Nickname: Tiyah/Tiyan</p>
 
-<h3>Education / Achievements</h3>
-<h5>Paranaque National High School - Baclaran</h5>
-<ul>
-  <li>Junior High - Senior High (ABM Strand)</li>
-  <li>Graduated Senior High with Honors</li>
-</ul>
+<header>
+    <h1>Christian Garcia's Personal Profile</h1>
+    <p>An aspiring IT Professional</p>
+</header>
 
-<h5>Asia Pacific College (2023-PRESENT)</h5>
-<ul>
-  <li>BSIT-MI</li>
-  <li>1st Year of College</li>
-</ul>
+<section>
+    <h2>About Me</h2>
+    <img src="https://scontent.fmnl4-2.fna.fbcdn.net/v/t39.30808-6/405508100_910721644100891_3107403962720576991_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeEwIIejYVCw8uD1M3tVqaqYVbAt0Yi_qKdVsC3RiL-opzKRlSp2FZG8ngiSNQQ4OaBw3miMNYa43EW6PfZqHyPt&_nc_ohc=9_aK-RAT5nsQ7kNvgHqZhrb&_nc_zt=23&_nc_ht=scontent.fmnl4-2.fna&_nc_gid=AGa6PpgUXEya_VpecR84h16&oh=00_AYDWZC7kH3umED_Mp2u3MMYYflw27lOhS3igm2xjjygjag&oe=674D5A51" width="200" alt="Profile Picture">
+    <p><strong>Name:</strong> Christian A. Garcia</p>
+    <p><strong>Nickname:</strong> Tiyah/Tiyan</p>
+</section>
 
-<h3>Course</h3>
-<p>Bachelor of Science in Information Technology with specialization in Mobile and Internet Technologies</p>
+<section>
+    <h2>Education & Achievements</h2>
+    <h5>Parañaque National High School - Baclaran</h5>
+    <ul>
+        <li>Junior High - Senior High (ABM Strand)</li>
+        <li>Graduated Senior High with Honors</li>
+    </ul>
+    <h5>Asia Pacific College (2023 - Present)</h5>
+    <ul>
+        <li>BSIT-MI</li>
+        <li>1st Year of College</li>
+    </ul>
+</section>
 
-<h3>IT Experience</h3>
-<ul>
-  <li>Basics of Java Codes</li>
-  <li>Basics of Python Codes</li>
-</ul>
+<section>
+    <h2>Course</h2>
+    <p>Bachelor of Science in Information Technology with specialization in Mobile and Internet Technologies</p>
+</section>
 
-<h3>Hobbies & Interests</h3>
-<ul>
-  <li>Gym</li>
-  <li>Playing Games</li>
-</ul>
+<section>
+    <h2>IT Experience</h2>
+    <ul>
+        <li>Basics of Java Codes</li>
+        <li>Basics of Python Codes</li>
+    </ul>
+</section>
 
-<h4>Games</h4>
-<table>
-  <tr>
-    <td><img src="https://cdn1.epicgames.com/...pubg.jpg" width="225" height="140" alt="Game Image"></td>
-  </tr>
-</table>
+<section>
+    <h2>Hobbies & Interests</h2>
+    <ul>
+        <li>Gym</li>
+        <li>Playing Games</li>
+    </ul>
+    <h4>Favorite Game</h4>
+    <img src="https://cdn1.epicgames.com/spt-assets/53ec4985296b4facbe3a8d8d019afba9/pubg-battlegrounds-9i69f.jpg" width="225" alt="PUBG Battlegrounds">
+</section>
 
-<h2>Goals In Life / Dream</h2>
-<p>To innovate and create technological solutions that improve daily life...</p>
+<section>
+    <h2>Goals in Life / Dream</h2>
+    <p>To innovate and create technological solutions that improve daily life, reduce environmental impact, and inspire others to embrace change while maintaining deep connections with my loved ones and achieving personal growth.</p>
+</section>
 
-<h2>Picture Gallery</h2>
-<p><img src="https://media.discordapp.net/..." alt="Image 1"></p>
-<p><img src="https://media.discordapp.net/..." alt="Image 2"></p>
+<section>
+    <h2>Picture Gallery</h2>
+    <div class="gallery">
+        <img src="https://media.discordapp.net/attachments/1154205204133191716/1311411389939716096/1717270668475_lgkzm5_2_0_edit.jpg" alt="Gallery Image 1">
+        <img src="https://media.discordapp.net/attachments/1154205204133191716/1311411665459351653/Screenshot_2024-11-21-08-38-58-722_com.tencent.ig.jpg" alt="Gallery Image 2">
+    </div>
+</section>
+
+<footer>
+    <p>© 2024 Christian A. Garcia | Aspiring IT Professional</p>
+</footer>
+    
 
 </body>
 </html>
