@@ -18,19 +18,20 @@
             margin: 0;
         }
 
-        .flex-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
+        .grid-container {
+            display: grid;
+            grid-template-areas:
+                "header header header header header header"
+                "menu main main main right right"
+                "menu footer footer footer footer footer";
             gap: 20px;
             padding: 20px;
             background-color: #333;
         }
 
-        .flex-container > div {
+        .grid-container > div {
             background-color: #4CAF50;
             border-radius: 10px;
-            width: 250px;
             padding: 15px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
             text-align: center;
@@ -38,6 +39,12 @@
             font-size: 18px;
             line-height: 1.5;
         }
+
+        .item1 { grid-area: header; }
+        .item2 { grid-area: menu; }
+        .item3 { grid-area: main; }
+        .item4 { grid-area: right; }
+        .item5 { grid-area: footer; }
 
         img {
             border-radius: 10px;
@@ -47,17 +54,20 @@
     </style>
 </head>
 <body>
+
 <h1>Christian Garcia's Personal Profile</h1>
 
-<div class="flex-container">
-    <div>
+<div class="grid-container">
+    <div class="item1">Header</div>
+
+    <div class="item2">
         <h2>About Me</h2>
         <img src="https://scontent.fmnl4-2.fna.fbcdn.net/v/t39.30808-6/405508100_910721644100891_3107403962720576991_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeEwIIejYVCw8uD1M3tVqaqYVbAt0Yi_qKdVsC3RiL-opzKRlSp2FZG8ngiSNQQ4OaBw3miMNYa43EW6PfZqHyPt&_nc_ohc=9_aK-RAT5nsQ7kNvgHqZhrb&_nc_zt=23&_nc_ht=scontent.fmnl4-2.fna&_nc_gid=AGa6PpgUXEya_VpecR84h16&oh=00_AYDWZC7kH3umED_Mp2u3MMYYflw27lOhS3igm2xjjygjag&oe=674D5A51" alt="Profile Picture">
         <p><strong>Name:</strong> Christian A. Garcia</p>
         <p><strong>Nickname:</strong> Tiyah/Tiyan</p>
     </div>
 
-    <div>
+    <div class="item3">
         <h2>Education</h2>
         <p><strong>High School:</strong> Paranaque National High School - Baclaran</p>
         <p><strong>Senior High Strand:</strong> ABM</p>
@@ -65,15 +75,7 @@
         <p><strong>Course:</strong> BSIT-MI (1st Year)</p>
     </div>
 
-    <div>
-        <h2>IT Experience</h2>
-        <ul>
-            <li>Basics of Java</li>
-            <li>Basics of Python</li>
-        </ul>
-    </div>
-
-    <div>
+    <div class="item4">
         <h2>Hobbies</h2>
         <ul>
             <li>Gym</li>
@@ -83,20 +85,11 @@
         <img src="https://cdn1.epicgames.com/spt-assets/53ec4985296b4facbe3a8d8d019afba9/pubg-battlegrounds-9i69f.jpg" alt="PUBG Battlegrounds">
     </div>
 
-    <div>
+    <div class="item5">
         <h2>Goals</h2>
         <p>To innovate and create technological solutions that improve daily life, reduce environmental impact, and inspire others to embrace change while maintaining deep connections with my loved ones.</p>
     </div>
-
-    <div>
-        <h2>Picture Gallery</h2>
-        <img src="https://media.discordapp.net/attachments/1154205204133191716/1311411389939716096/1717270668475_lgkzm5_2_0_edit.jpg" alt="Gallery Image 1">
-        <img src="https://media.discordapp.net/attachments/1154205204133191716/1311411665459351653/Screenshot_2024-11-21-08-38-58-722_com.tencent.ig.jpg" alt="Gallery Image 2">
-    </div>
 </div>
-
-<footer style="text-align: center; padding: 10px; background: #333; color: white;">
-</footer>
 
 </body>
 </html>
