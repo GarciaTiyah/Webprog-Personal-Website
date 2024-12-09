@@ -4,22 +4,91 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Christian Garcia's Personal Profile</title>
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1e1e2f;
+            color: #f8f8f8;
+        }
+
+        h1 {
+            text-align: center;
+            color: white;
+            padding: 20px;
+            background: linear-gradient(135deg, #4CAF50, #2196F3);
+            margin: 0;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .card {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #4CAF50;
+            border: 1px solid #ddd;
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            color: white;
+            font-size: 18px;
+            line-height: 1.5;
+        }
+
+        img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        ul li {
+            margin: 5px 0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background: #333;
+            color: white;
+        }
+    </style>
 </head>
 <body>
     <h1>Christian Garcia's Personal Profile</h1>
 
-    <div class="grid-container">
-        <div class="item1">PERSONAL PROFILE</div> <!-- header -->
-        
-        <div class="item2"> <!-- menu -->
+    <div class="container">
+        <div class="card">
             <h2>About Me</h2>
             <img src="https://scontent.fmnl4-2.fna.fbcdn.net/v/t39.30808-6/405508100_910721644100891_3107403962720576991_n.jpg" alt="Profile Picture">
             <p><strong>Name:</strong> Christian A. Garcia</p>
             <p><strong>Nickname:</strong> Tiyah/Tiyan</p>
         </div>
 
-        <div class="item3"> <!-- main -->
+        <div class="card">
             <h2>Education</h2>
             <p><strong>High School:</strong> Paranaque National High School - Baclaran</p>
             <p><strong>Senior High Strand:</strong> ABM</p>
@@ -27,7 +96,7 @@
             <p><strong>Course:</strong> BSIT-MI (1st Year)</p>
         </div>
 
-        <div class="item4"> <!-- right -->
+        <div class="card">
             <h2>Hobbies</h2>
             <ul>
                 <li>Gym</li>
@@ -37,13 +106,14 @@
             <img src="https://cdn1.epicgames.com/spt-assets/53ec4985296b4facbe3a8d8d019afba9/pubg-battlegrounds-9i69f.jpg" alt="PUBG Battlegrounds">
         </div>
 
-        <div class="item5"> <!-- footer -->
+        <div class="card">
             <h2>Goals</h2>
             <p>To innovate and create technological solutions that improve daily life, reduce environmental impact, and inspire others to embrace change while maintaining deep connections with my loved ones.</p>
         </div>
     </div>
 
     <footer>
+        <p>GARCIA PERSONAL PROFILE</p>
     </footer>
 </body>
 </html>
