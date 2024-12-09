@@ -10,8 +10,11 @@ h1 {
     text-align: center;
     color: white;
     padding: 20px;
-    background: linear-gradient(135deg, #4CAF50, #2196F3);
     margin: 0;
+    background: linear-gradient(135deg, #4CAF50, #2196F3);
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .grid-container {
@@ -20,9 +23,14 @@ h1 {
         "header header header header header header"
         "menu main main main right right"
         "menu footer footer footer footer footer";
+    grid-template-columns: 1fr 3fr 2fr;
+    grid-template-rows: auto auto auto;
     gap: 20px;
     padding: 20px;
-    background-color: #333;
+    background-color: #292933;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+    margin: 20px;
 }
 
 .grid-container > div {
@@ -32,8 +40,14 @@ h1 {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
     text-align: center;
     color: white;
-    font-size: 18px;
+    font-size: 1rem;
     line-height: 1.5;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.grid-container > div:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
 .item1 { grid-area: header; }
@@ -46,11 +60,26 @@ img {
     max-width: 100%;
     height: auto;
     border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-footer {
-    text-align: center;
-    padding: 10px;
-    background: #333;
-    color: white;
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-areas:
+            "header"
+            "menu"
+            "main"
+            "right"
+            "footer";
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .grid-container > div {
+        font-size: 0.9rem;
+    }
 }
